@@ -27,6 +27,9 @@ class Report:
             dsn=f'{config.ip_kontur}/{config.port_kontur}:{config.path_to_db_kontur}',
             user=f'{config.user_db_kontur}',
             password=f'{config.password_db_kontur}',
+            # при развертывании на хостинге положить файл "libfbclient.so.2.5.9" в папку static
+            # при условии что хостинг на linux, также расскоментировать строку ниже
+            # fb_library_name="static/libfbclient.so.2.5.9",
             charset="win1251"
         )
         return con
